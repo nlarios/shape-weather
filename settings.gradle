@@ -1,6 +1,0 @@
-include 'buildSrc'
-include 'weather-application'
-include 'weather-application'
-include 'weather-model'
-include 'weather-core'
-

@@ -1,0 +1,14 @@
+ersion: "3.2"
+services:
+  weather-db:
+    container_name: weather-db
+    image: postgres:latest
+    env_file:
+      - ./postgres-db.env
+    ports:
+      - ${POSTGRES_PORT}:5432
+    volumes:
+      - ${POSTGRES_VOLUME}:/var/lib/postgresql/data
+      - ./Docker/geopolis-db/init_scripts/:/docker-entrypoint-initdb.d/
+    networks:
+      - default
