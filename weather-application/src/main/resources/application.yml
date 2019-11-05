@@ -1,0 +1,17 @@
+server:
+  port: 8082
+db:
+  host: localhost
+  port: 5432
+  name: weather_db
+  username: weather_user
+  password: w34tHer
+weather:
+  clients:
+    openWeather:
+      basePath: https://api.openweathermap.org/data/2.5
+      currentWeatherPath: /weather
+      hourlyForecastPath: /forecast/hourly
+      shortTermForecastPath: /forecast
+      longTermForecastPath: /forecast/daily
+      apiKey: 950c782ed69b9ea74ce0c375aad8a4eb

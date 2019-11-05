@@ -1,11 +1,6 @@
-
 plugins {
     kotlin("jvm")
 }
 
+kotlinSpring()
 kotlinProject()
-
-
-dependencies {
-    implementation(kotlin("stdlib-jdk8"))
-}

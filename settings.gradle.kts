@@ -5,5 +5,6 @@ include(
     "weather-application",
     "weather-persistence",
     "weather-client",
+    "weather-regulator",
     "weather-core"
 )

@@ -1,4 +1,4 @@
-package dk.shape.weather.model
+package dk.shape.weather.model.entity
 
 data class Weather (
     val id: Int,

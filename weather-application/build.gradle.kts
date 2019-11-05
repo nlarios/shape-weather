@@ -12,7 +12,11 @@ application  {
 
 
 dependencies {
+    implementation(project(":weather-persistence"))
+    implementation(project(":weather-client"))
+    implementation(project(":weather-regulator"))
     implementation(project(":weather-core"))
     compile(project(":weather-model"))
+
 }
 

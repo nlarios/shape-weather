@@ -17,6 +17,8 @@ fun Project.kotlinSpring() {
         "testImplementation"("org.springframework.boot:spring-boot-starter-test") {
             exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
         }
+        "annotationProcessor"("org.springframework.boot:spring-boot-configuration-processor")
+
     }
 }
 
@@ -29,14 +31,6 @@ fun Project.kotlinProject() {
         // Kotlin libs
         "implementation"(kotlin("stdlib-jdk8"))
 
-        // Logging
-//        "implementation"("org.slf4j:slf4j-simple:1.7.25")
-//        "implementation" ("log4j:log4j:1.2.17")
-
-//        "implementation"("io.github.microutils:kotlin-logging:1.6.22")
-
-        "annotationProcessor"("org.springframework.boot:spring-boot-configuration-processor")
-
         // Mockk
         "testImplementation"("io.mockk:mockk:1.9")
 
@@ -44,6 +38,20 @@ fun Project.kotlinProject() {
         "testImplementation"("org.junit.jupiter:junit-jupiter-api:$junitVersion")
         "testImplementation"("org.junit.jupiter:junit-jupiter-params:$junitVersion")
         "runtime"("org.junit.jupiter:junit-jupiter-engine:$junitVersion")
+    }
+}
+
+fun Project.cacheLibs() {
+    dependencies {
+        "implementation"("com.google.guava:guava:28.1-jre")
+    }
+}
+
+fun Project.kotlinCore() {
+    dependencies {
+        // https://mvnrepository.com/artifact/org.modelmapper/modelmapper
+        "implementation"("org.modelmapper:modelmapper:2.3.5")
+
     }
 }
 

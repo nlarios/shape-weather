@@ -1,14 +1,13 @@
-plugins {
 
+plugins {
     kotlin("jvm")
 }
 
 kotlinSpring()
 kotlinProject()
-dataLibs()
-
+cacheLibs()
 
 dependencies {
+    implementation(project(":weather-client"))
     compile(project(":weather-model"))
 }
-
